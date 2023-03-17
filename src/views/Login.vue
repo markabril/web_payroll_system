@@ -1,15 +1,17 @@
 <template>
   <div class="container">
-    <section class="vh-100">
-  <div class="container-fluid h-custom">
-    <p :class="this.currentType"></p>
-    <div>
-        <div class="form-check form-switch">
-            <label for="flexSwitchCheckDefault">{{this.currentType }}</label>
-            <input class="form-check-input" type="checkbox" v-on:click="changeStat($event)" id="flexSwitchCheckDefault">
+    <section class="">
+  <div class="container-fluid h-custom pt-5">
+    <h1>Web Based Payroll System</h1>
+    <div class="row d-flex justify-content-center align-items-center">
+        <div>
+        <h2>{{this.currentType }}</h2>
+        <div class="form-check form-switch d-flex flex-column justiy-content-center">
+            <div class="mx-auto">
+                <input class="form-check-input" type="checkbox" v-on:click="changeStat($event)" id="flexSwitchCheckDefault">
+            </div>
         </div>
     </div>
-    <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-md-9 col-lg-6 col-xl-5">
         <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
           class="img-fluid" alt="Sample image">
@@ -27,11 +29,11 @@
           <!-- Password input -->
           <div class="form-outline mb-3">
             <input type="password" id="form3Example4" class="form-control form-control-lg"
-              placeholder="Enter password" />
+              placeholder="Enter Password" />
             <label class="form-label" for="form3Example4">Password</label>
           </div>
 
-          <div class="text-center text-lg-start mt-4 pt-2">
+          <div class="text-center text-lg-start mt-4 pt-2 d-flex justify-content-center">
             <button type="button" class="btn btn-primary btn-lg"
               style="padding-left: 2.5rem; padding-right: 2.5rem;">{{this.currentType}}</button>
           </div>
@@ -40,15 +42,12 @@
       </div>
     </div>
   </div>
-  <div
+  <!-- <div
     class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
-    <!-- Copyright -->
     <div class="text-white mb-3 mb-md-0">
       Copyright © 2020. All rights reserved.
     </div>
-    <!-- Copyright -->
 
-    <!-- Right -->
     <div>
       <a href="#!" class="text-white me-4">
         <i class="fab fa-facebook-f"></i>
@@ -63,8 +62,7 @@
         <i class="fab fa-linkedin-in"></i>
       </a>
     </div>
-    <!-- Right -->
-  </div>
+  </div> -->
 </section>
   </div>
 </template>
@@ -73,7 +71,7 @@
 /* eslint-disable */
 export default {
     name:"LoginPage",
-    date(){
+    data(){
         return{
             currentType:"Time In",
         };
@@ -111,7 +109,7 @@ height: 100%;
 }
 
 #flexSwitchCheckDefault {
-    width:12rem;
-    height:6rem;
+    width:8rem;
+    height:4rem;
 }
 </style>>
